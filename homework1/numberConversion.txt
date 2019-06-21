@@ -1,0 +1,142 @@
+(10 points) Convert the following numbers from one system to another. 
+Clearly illustrate the conversion process.
+
+(a) (1011100101)2 to decimal
+
+
+    Solution: 
+        1 + 4 + 32 + 64 + 128 + 512 = 741
+
+
+(b) (1100110011000)2 to octal
+
+
+    Solution: 
+        Since for octal we've got 2 cubed, we clasify the binary number from right to left
+        in groups of 3 bits(which is the power of the number 2) and convert them one by one into decimal numbers
+
+        000 -> 0
+        011 -> 3
+        110 -> 6
+        100 -> 4
+        1 -> 001(we append two zeros to the left of the number to have a group of three bits) -> 1
+
+        Therefore the answer is (14630)8
+
+
+(c) (101010111000011)2 to hexadecimal
+
+
+     Solution:
+        As for hexadecimal we've got 2 to the forth power, we clasify the binary number from right to left
+        in groups of 4 bits (which is the power of the number 2) and convert them one by one into decimal numbers
+
+        0000 -> 0
+        0111 -> 7
+        0101 -> 5
+        1 -> 0001 -> 1
+
+        Therefore the final answer is (1570)16
+
+
+(d) (120)10 to binary
+
+
+    Solution:
+        120 |_2_
+        120  60 |_2_ 
+        ___  60  30 |_2_
+         0  ___  30  15 |_2_
+             0   ___ 14   7 |_2_
+                  0  ___  6   3 |_2_
+                      1  ___  2   1
+                          1  ___
+                               1
+        
+        Therefore the answer is (1111000)2
+
+
+(e) (4096)10 to octal
+
+
+    Solution: 
+        4096|_8_
+        4096 512|_8_
+        ___  512 64 |_8_
+         0   ___ 64   8 |_8_
+              0  ___  8   1
+                  0  ___
+                      0
+
+        Therefore the final answer is (10000)8
+
+
+(f) (31405)10 to hexadecimal
+
+
+    Solution:
+        31405|__16__
+        31392  1962 |_16_
+        _____  1952  122 |__16__
+         13   _____  112    7
+                10  _____
+                     10
+        13 -> D 
+        10 -> A
+
+        Therefore the final answer is (7AAD)16
+
+
+(g) (7063)8 to binary
+
+
+    Solution: 
+        7 -> 111 (we drop the zero on the left side to get a groub of 3 bits)
+        0 -> 000
+        6 -> 110
+        3 -> 011
+
+        Therefore the answer is (111000110011)2
+
+
+(h) (3177)8 to decimal
+
+
+    Solution: 
+        First let's convert it into a binary representation
+        3 -> 011
+        1 -> 001
+        7 -> 111
+        7 -> 111
+        (3177)8 -> (11001111111)2
+
+        Now let's convert it into decimal :)
+        1024 + 512 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 1663
+
+        Therefore the answer is (1663)10
+
+
+(i) (A5E)16 to binary
+
+
+    Solution: 
+        A -> 10 -> 1010
+        5 -> 5 -> 0101
+        E -> 14 -> 1110
+
+        Therefore the answer is (101001011110)2
+
+
+(j) (9B1F)16 to decimal
+
+
+    Solution: 
+        First let's convert it into a binary representation
+        9 -> 1001
+        B -> 11 -> 1011
+        1 -> 000
+        F -> 15 -> 1111
+
+        thus, (9B1F)16 -> (1001101100011111)2
+        then we must convert it into a decimal number
+        (1001101100011111)2 -> (39711)10

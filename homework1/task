@@ -1,0 +1,94 @@
+American University of Armenia
+CS 120 Intro to OOP
+Homework Assignment 1
+1. (15 points) Write a Java program that finds and prints the average of four integers. In
+order to achieve this, in your program you should:
+1) declare and initialise four variables of integer type,
+2) calculate and store their sum in a fifth variable named sum,
+3) divide the value of sum by 4 and store it in a sixth variable average,
+4) print the resulting value with a corresponding message.
+Think carefully before choosing the types of sum and average. Test your program on 5
+different sets of four integers changing the initialisation values and include your results
+in your answer. Does your program always produce a correct answer? If not, reconsider
+the types of all six variables and try to explain why the bug occurs. Fix your program to
+resolve the bug and test it again on the 5 examples.
+2. (10 points) Convert the following numbers from one system to another. Clearly illustrate the conversion process.
+(a) (1011100101)2 to decimal
+(b) (1100110011000)2 to octal
+(c) (101010111000011)2 to hexadecimal
+(d) (120)10 to binary
+(e) (4096)10 to octal
+(f) (31405)10 to hexadecimal
+(g) (7063)8 to binary
+(h) (3177)8 to decimal
+(i) (A5E)16 to binary
+(j) (9B1F)16 to decimal
+3. (10 points) Explain step-by-step what the code snippet below does and give the values
+of the variables after each update. Make sure that your explanation is detailed.
+1 int x, y;
+2 int z = 98;
+3 x = ++z;
+4 y = x++;
+5 boolean first = (y == x);
+6 boolean second = x == y + 1 && y == z + 1;
+7 x = ~ z + 1;
+8 boolean third = x >= 0 || x + z == 0;
+9 boolean fourth = !third;
+10 System.out.println("x = " + x + "; y = " + y + "; z = " + z + ";");
+11 System.out.println("first = " + first + "; second = " + second + ";");
+12 System.out.println("third = " + third + "; fourth = " + fourth + ";");
+13 y = z | x;
+14 z >>= 2;
+15 x = y * 1000 % z;
+16 System.out.println("x = " + x + "; y = " + y + "; z = " + z + ";");
+1
+4. (25 points) For each of the code snippets below explain what they do. Support your
+explanation with a detailed step-by-step description (including numerical representation,
+if needed) of the calculation process.
+(a) int a = 15;
+int b = -36;
+int tmp = a;
+a = b;
+b = tmp;
+(b) int a = 45;
+int b = 10;
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+a = a + b;
+b = a - b;
+a = a - b;
+(c) int a = 192;
+int b = 12;
+int c = a & -a;
+int d = b & -b;
+System.out.println("The results are " + c + " and " + d);
+(d) int a = 10;
+int b = 128;
+int c = a & (a - 1);
+int d = b & (b - 1);
+System.out.println("The results are " + c + " and " + d);
+(e) int a = 1;
+int b = 128;
+a <<= 6;
+b <<= 2;
+System.out.println("The results are " + a + " and " + b);
+5. (5 points) Determine the value of the expression by first constructing the two’s complement representation of the operands and then performing the bitwise operation on
+them.
+(a) 510 & -2050
+(b) -500 | 12345
+(c) 15 ^ (~70)
+(d) -201 >> 3
+(e) -201 >>> 4
+2
+6. (10 points) Write a Java program that inputs the radius of a circle and outputs its
+circumference and its area.
+7. (25 points) Write a Java program that inputs three lines of text and for each line of
+the input text outputs that line of text with all occurrences of “apple” changed to “pear”
+and the last occurrence of “plum” changed to “apricot”. For example, the line
+I like plums. This apple is red but those apples are green.
+should be changed to
+I like apricots. This pear is red but those pears are green.
+If the word “plum” occurs more than once in the line, your program will replace only the
+last occurrence of “plum”.
+3
