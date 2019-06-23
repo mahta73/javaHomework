@@ -47,17 +47,34 @@ public class Explain {
         // (99 == 100) 99 is not equa to 100, therefore it returns false 
         // false is stored in first 
         boolean first = (y == x);
-        
+        // for && operator both of the conditions must be true to get true
+        // at this point ot the program x = 100, y = 99 and z = 99 
+        // therefore x == y + 1 returns true and 7 == z + 1 returns false
+        // since true && false returns false, the value of the 'second' variable will be false
         boolean second = x == y + 1 && y == z + 1;
+        // the value of z is 99, ~99 is -100
+        // x = -100 + 1 = -99
         x = ~ z + 1;
+        // the variable third which is a boolean type is being declared and initialized
+        // x is a negative number, therefore the first part is false
+        // x + z is equal to 0, therefore the second part is true
+        // true or false is true
+        // as a result the value of third is true
         boolean third = x >= 0 || x + z == 0;
+        // Not(third) is NOT(true) which flase, so the value of the fourth is false
         boolean fourth = !third;
+        // the values of x, y and z are being printed at console
         System.out.println("x = " + x + "; y = " + y + "; z = " + z + ";");
+        // the values of first and second are being printed at console
         System.out.println("first = " + first + "; second = " + second + ";");
+        // the values of third and forth are being printed at console
         System.out.println("third = " + third + "; fourth = " + fourth + ";");
-        y = z | x;
-        z >>= 2;
-        x = y * 1000 % z;
+        y = z | x; // | is bitwise or
+        z >>= 2; // z = z >> 2; -> right shifting
+        // (99 * 100) = 9900
+        // 9900 % 24 -> % returns the remainder of the division
+        x = y * 1000 % z;   
+        // the values of x, y and z are being printed at console
         System.out.println("x = " + x + "; y = " + y + "; z = " + z + ";");
     }
 }
