@@ -11,20 +11,28 @@ import java.util.Random;
 
 public class Arr {
 
-    static void fillOutArray(int[] arr, int range) {
+    public static void fillOutArray(int[] arr, int range) {
         Random rand = new Random();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(range);
         }
     }
 
-    static void printArrayElements(int[] arr, String arrayName) {
+    public static void printArrayElements(int[] arr, String arrayName) {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arrayName + "[ " + i + " ] = " + arr[i]);
         }
     }
     // Your program should contain separate methods for constructing the count array
-    static int[] ConstructCountArr(int[] arr) {
+    /*
+        int[] count = new int[RANGE]; // default is 0
+        for (int i = 0; i < n ; i++) {
+            count[array[i]]++;
+        }
+    */
+
+    // java api 8, arrays class fill
+    public static int[] ConstructCountArr(int[] arr) {
         int [] count = new int[100];
 
         for (int i = 0; i < 100; i++) {
@@ -40,15 +48,16 @@ public class Arr {
         return count;
     }
     
-    static void sortArr(int[] count, int[]intArr) {
+    public static void sortArr(int[] count, int[]intArr) {
         int index = 0;
         for (int i = 0; i < count.length; i++ ) {
-            if (count[i] != 0) {
+            // if (count[i] != 0) {
                 for (int j = 0; j < count[i]; j++ ) {
+                    // intArr[index++] = i;
                     intArr[index] = i;
                     index++;
                 }
-            }
+            /// }
         }
     }
 
@@ -81,4 +90,5 @@ public class Arr {
         
         printArrayElements(intArr, "SortedArr");
     }
+    // ruben_ashughyan@edu.aua.am
 }

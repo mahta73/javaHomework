@@ -20,6 +20,7 @@ public class Sequence {
         for (int i = 0; i < n / 2 ; i+=2) {
             String c; 
             c = stringArray[i];
+            // add an if statement to check if the length is even or odd
             stringArray[i] = stringArray[(n-1) - i];
             stringArray[(n-1) - i] = c;
         }
