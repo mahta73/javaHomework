@@ -95,3 +95,15 @@ public class PerfectPercentage {
 
     }
 }
+
+/*
+    What is the advantage of this approach over checking every single
+    number in the range 1..N and finding the accurate percentage?
+    I think since the numbers are being taken randomly, we can find the chance of getting 
+    a perfect number at random. While by checking every single number in the range 1,..,N
+    we find the accurate percentage whiout considering the chance of getting it randomly, which
+    is not very realistic.
+    
+    How does the accuracy of the calculation change when we move from K = 100 to K = 1000?
+    As we are considering larger amount of numbers, therefore I think it gets more accurate
+*/

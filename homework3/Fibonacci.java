@@ -8,20 +8,33 @@ import java.util.Scanner;
 public class Fibonacci {
 
     public static double nth_FibonacciNumber(int n) {
-        double[] fibonacci = new double[n+1];
-        for (int i = 0; i < n+1; i++) {
-            if (i == 0 || i == 1) {
-                fibonacci[i] = 1;
-            } else {
-                fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
-            }
-        }
+        // double[] fibonacci = new double[n+1];
+        // for (int i = 0; i < n+1; i++) {
+        //     if (i == 0 || i == 1) {
+        //         fibonacci[i] = 1;
+        //     } else {
+        //         fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+        //     }
+        // }
 
-        return fibonacci[n];
+        // return fibonacci[n];
+        if (n <= 2)
+		    return 1;
+	
+        int previousFib = 1;
+        int currentFib = 1;
+        for (int i = 2; i < n; i++)
+        {
+            int newFib = previousFib + currentFib;
+            previousFib = currentFib;
+            currentFib  = newFib;
+        }
+        
+        return currentFib;
     }
 
     public static double nth_FibonacciRecursive(int n) {
-        if (n == 0 || n == 1) {
+        if (n == 1 || n == 2) {
             return 1;
         } else {
             return nth_FibonacciRecursive(n-1) + nth_FibonacciRecursive(n-2);

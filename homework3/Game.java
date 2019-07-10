@@ -12,6 +12,7 @@
 import java.util.Scanner;
 
 public class Game {
+    public static int test;
     // get the digits of the number 
     public static int[] digitsofNumber(int number) {
         int size = 0;
@@ -43,13 +44,28 @@ public class Game {
 
     // recursion
     public static int ProductofDigitsRecursive(int number) {
-        if (number < 10) {
-            System.out.println("The product of the digits of the number is " + number);
-            return number;
+        
+        int product = 1;
+        if (number == 0){
+            return product;
         }
-        else 
-            return ProductofDigitsRecursive(ProductofDigitsOfNumber(number));
+        else {
+            product = product * number % 10 * ProductofDigitsRecursive(number / 10);
+            return product;
+        }
     }
+
+    public static int product_recursion(int number) {
+        if (ProductofDigitsRecursive(number) < 10) {
+            System.out.println("The product of the digits of the number is " + ProductofDigitsRecursive(number));
+            return number;
+        } else {
+            System.out.println("The product of the digits of the number is " + ProductofDigitsRecursive(number));
+            return product_recursion(ProductofDigitsRecursive(number));
+        } 
+    }
+
+
 
     // iterative
     public static void ProductofDigitsIteration(int number) {
@@ -69,8 +85,15 @@ public class Game {
         } while(positiveInt <= 0);
         
         ProductofDigitsIteration(positiveInt);
-
-        ProductofDigitsRecursive(positiveInt);
-        
-    }
+        System.out.println();
+        product_recursion(positiveInt);
+    }   
 }
+
+/*
+    Does your program always terminate? Explain your answer.
+    I think yes, my program always terminates since digits of a number are integers
+    and if we keep multiplying them by each other we will get smaller and smaller numbers
+    and a signle digit number eventually.
+
+*/
